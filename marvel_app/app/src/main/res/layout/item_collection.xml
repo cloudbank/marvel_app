@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.teahouse.marvelmovies.ViewModel.MarvelItemViewModel"/>
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="@dimen/collection_item_width"
+                    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:text="@{viewmodel.detailModel.title}"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginBottom="@dimen/app_margin_default"
+            android:layout_marginLeft="@dimen/app_margin_default"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_above="@id/itemName"
+            android:padding="@dimen/app_margin_default_min"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="app_margin_default_min">5dp</dimen>
+    <dimen name="app_margin_default">10dp</dimen>
+    <dimen name="app_margin_default_med">15dp</dimen>
+    <dimen name="app_margin_default_double">20dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="card_character_height">158dp</dimen>
+    <dimen name="card_character_title_text_size">17sp</dimen>
+
+    <dimen name="character_detail_height">320dp</dimen>
+    <dimen name="character_detail_mask">250dp</dimen>
+    <dimen name="character_detail_title_margin_bottom">77dp</dimen>
+
+    <dimen name="collection_view_pager_height">179dp</dimen>
+    <dimen name="collection_item_width">108dp</dimen>
+
+</resources>

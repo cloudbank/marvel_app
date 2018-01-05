@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <variable
+            name="viewmodel"
+            type="com.teahouse.marvelmovies.ViewModel.CharacterDetailViewModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </variable>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            tools:context="DetailActivity">
+
+            <ImageView
+                android:id="@+id/characterImage"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/character_detail_height"
+                android:background="#dedede"
+                app:imageUrl="@{viewmodel.detailImageUrl}"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/character_detail_mask"
+                android:layout_alignBottom="@id/characterImage"
+                android:background="@drawable/item_character_detail_mask_view">
+            </View>
+
+            <TextView
+                android:id="@+id/characterName"
+                android:text="@{viewmodel.model.name}"
+                android:layout_alignBottom="@id/characterImage"
+                android:textSize="@dimen/card_character_title_text_size"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/character_detail_title_margin_bottom"
+                android:layout_marginLeft="@dimen/app_margin_default_med"
+                tools:text="Captain America"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/descriptionTitle"
+                android:text="@string/character_detail_description_title"
+                android:layout_alignBottom="@id/characterImage"
+                android:textSize="@dimen/card_character_title_text_size"
+                android:textColor="#f00"
+                android:layout_marginBottom="@dimen/app_margin_default"
+                android:layout_marginLeft="@dimen/app_margin_default_med"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:text="@{viewmodel.model.description}"
+                android:layout_below="@id/descriptionTitle"
+                android:textSize="@dimen/card_character_title_text_size"
+                android:textColor="#fff"
+                tools:text="Nono nono nonono nonono"
+                android:layout_marginTop="@dimen/app_margin_default"
+                android:layout_marginLeft="@dimen/app_margin_default_med"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/dynamicItems"
+                android:orientation="vertical"
+                android:layout_below="@id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dynamicItemsSeries"
+                android:orientation="vertical"
+                android:layout_below="@id/dynamicItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>
