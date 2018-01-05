@@ -1,6 +1,7 @@
 # marvel characters
 
-This is an Android example project that uses Kotlin, Data Binding and Rx in a MVVM architecture.
+This is an Android example project that uses Kotlin, Data Binding and Rx in a MVVM architecture
+started by https://github.com/dougritter/marvel-kotlin-mvvm-databinding
 
 The objective is to achieve some knowledge about the Kotlin language.
 The project uses the Marvel API: http://developer.marvel.com
